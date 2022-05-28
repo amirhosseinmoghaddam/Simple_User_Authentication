@@ -1,0 +1,18 @@
+{% extends 'authapp1/base.html' %}
+
+{% block title %}
+    Login
+{% endblock title %}
+    
+
+{% block content %}
+<div>
+    <h1>Login</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Login</button>
+    </form>
+    <h4>Don't have an account? <a href="{% url 'register' %}">Register</a></h4>
+</div>
+{% endblock content %}

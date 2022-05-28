@@ -1,0 +1,14 @@
+{% extends 'authapp1/base.html' %}
+
+
+{% block title %}
+    Logout
+{% endblock title %}
+
+
+{% block content %}
+<div>
+    <h1>Logout successfuly</h1>
+    <a href="{% url 'login' %}">Login</a>
+</div>
+{% endblock content %}

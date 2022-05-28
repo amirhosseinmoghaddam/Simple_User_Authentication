@@ -1,0 +1,23 @@
+{% extends 'authapp1/base.html' %}
+
+
+{% block title %}
+    Detail page
+{% endblock title %}
+
+
+{% block content %}
+<div>
+    <h1>Detail</h1>
+    <table>
+        <th>Cars</th>
+            {% if user.is_authenticated %}
+               {% for data in datas %}
+                  <tr>
+                     <td>{{ data }}</td> 
+                  </tr>   
+               {% endfor %}
+            {% endif %}
+    </table>
+</div>
+{% endblock content %}

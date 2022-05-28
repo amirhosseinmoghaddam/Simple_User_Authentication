@@ -1,0 +1,22 @@
+{% extends 'authapp1/base.html' %}
+
+
+{% block title %}
+    Home
+{% endblock title %}
+    
+
+{% block content %}
+<div>
+    {% if user.is_authenticated %}
+       <h2>Welcome {{ user.username }}</h2>
+       <a href="{% url 'detail' user.username %}">Data show</a>
+       <a href="{% url 'logout' %}">Logout</a>
+
+    {% else %}
+       <a href="{% url 'register' %}">Register</a>
+       <a href="{% url 'login' %}">Login</a>
+
+    {% endif %}
+</div>
+{% endblock content %}   
